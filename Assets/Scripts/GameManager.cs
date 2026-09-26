@@ -1,5 +1,6 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,12 +17,36 @@ public class GameManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
          else
         {
             Destroy(gameObject);
+            return;
         }
     }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        GameObject textObj = GameObject.Find("CoinCounterText");
+
+        if(textObj != null)
+        {
+            coinText = textObj.GetComponent<TMP_Text>();
+        }
+        UpdateCoinUI();
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+     }
+
+     private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
 
     private void UpdateCoinUI()
     {
@@ -30,17 +55,10 @@ public class GameManager : MonoBehaviour
             coinText.text = "Coins: " + coinCount;
         }
     }
-
-    private void Start()
-    {
-        UpdateCoinUI() ;
-    }
-
-    public void AddCoin(int amount = 1)
+     public void AddCoin(int amount = 1 )
     {
         coinCount += amount;
-        UpdateCoinUI();
-    }
-
-    
+        UpdateCoinUI() ;
+        
+    }   
 }
