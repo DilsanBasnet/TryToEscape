@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour{
     public float speed = 7f;
@@ -19,27 +20,36 @@ public class PlayerController : MonoBehaviour{
 
     void Update()
     {
-        move = Input.GetAxisRaw("Horizontal"); 
-
-        if(spriteRenderer != null)
+        move = 0f;
+        if(Keyboard.current != null)
         {
-            if(move > 0) {
+            if(Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
+            move = -1f;
+
+            else if(Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
+            move = 1f;
+        }
+
+        if (spriteRenderer != null)
+        {
+            if(move > 0) 
             spriteRenderer.flipX = false;
-        }
-        else if(move < 0){
+
+            else if (move < 0) 
             spriteRenderer.flipX = true;
-        } 
-
         }
-       
-
-        if(groundCheck != null) {
+        if(groundCheck != null)
+        {
             Grounded = Physics2D.OverlapBox(groundCheck.position, groundChecksize, 0f, groundLayer);
+
         }
 
-        if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && Grounded){
+        bool jumpPressed = Keyboard.current != null && (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.upArrowKey.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame);
+
+        if(jumpPressed && Grounded)
+        {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jump);
-        }   
+        }
     }
 
     void FixedUpdate()
