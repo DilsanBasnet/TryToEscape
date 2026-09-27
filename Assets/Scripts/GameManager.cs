@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Time.timeScale = 1f;
+
         if(scene.name == "Main Menu Scene")
         {
             totalCoins = 0;
@@ -45,7 +46,18 @@ public class GameManager : MonoBehaviour
 
     private void FindCoinTextUI()
     {
-       if(coinText == null)
+        GameObject coinObj = GameObject.Find("CoinText");
+        if(coinObj == null)
+        {
+            coinObj = GameObject.Find("CoinsText");
+
+        }
+        if(coinObj != null)
+        {
+            coinText = coinObj.GetComponent<TMP_Text>();
+        }
+
+       else if(coinText == null)
         {
             coinText = FindAnyObjectByType<TMP_Text>() ;
         }
@@ -67,6 +79,18 @@ public class GameManager : MonoBehaviour
         {
             coinText.text = "Coins : " + totalCoins;
         }
+    }
+
+    public void RestartCurrentLevel()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Main Menu Scene");
     }
 
 }

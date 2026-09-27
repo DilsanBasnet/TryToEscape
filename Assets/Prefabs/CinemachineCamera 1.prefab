@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9020241334421569192}
   - component: {fileID: 3847308258262884783}
   - component: {fileID: 1451263765660503014}
-  - component: {fileID: 4464997272453789588}
+  - component: {fileID: 2572002952670694215}
   m_Layer: 0
   m_Name: CinemachineCamera 1
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6378342514979727577}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.22112, y: 1.35831, z: 0}
+  m_LocalPosition: {x: -14.503333, y: 1.0099996, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -92,7 +92,7 @@ MonoBehaviour:
   CameraDistance: 10
   DeadZoneDepth: 0
   Composition:
-    ScreenPosition: {x: 0, y: 0.23}
+    ScreenPosition: {x: 0.13, y: 0.03}
     DeadZone:
       Enabled: 0
       Size: {x: 0.15, y: 0.15}
@@ -108,7 +108,7 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
---- !u!114 &4464997272453789588
+--- !u!114 &2572002952670694215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,10 +120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d77390a12609749aa085f5407f2c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::levelPreviewCameraScript
-  virtualCamera: {fileID: 0}
+  virtualCamera: {fileID: 3847308258262884783}
   normalLensSize: 6
-  previewLensSize: 12
-  zoomSpeed: 2
+  previewLensSize: 16
+  zoomSpeed: 8
+  playerTransform: {fileID: 6694999161595414136, guid: d4adc89ae0f4a2b4ab2ddc152826f564, type: 3}
   levelCenterTarget: {fileID: 4050046505156261075, guid: e295caf8ea1933f46a5bb6c4b4e53883, type: 3}
   PlayerMovementScript: {fileID: 3226256451674891981, guid: d4adc89ae0f4a2b4ab2ddc152826f564, type: 3}
   startPromptUI: {fileID: 0}

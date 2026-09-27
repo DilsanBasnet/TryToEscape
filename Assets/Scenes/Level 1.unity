@@ -313,21 +313,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1451263765660503014, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
+      propertyPath: CameraDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572002952670694215, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1575571219}
+    - target: {fileID: 2572002952670694215, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
+      propertyPath: previewLensSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572002952670694215, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
+      propertyPath: levelCenterTarget
+      value: 
+      objectReference: {fileID: 864898910}
+    - target: {fileID: 2572002952670694215, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
+      propertyPath: PlayerMovementScript
+      value: 
+      objectReference: {fileID: 1575571218}
+    - target: {fileID: 3847308258262884783, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 1575571219}
     - target: {fileID: 6378342514979727577, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
       propertyPath: m_Name
       value: CinemachineCamera 1
       objectReference: {fileID: 0}
     - target: {fileID: 9020241334421569192, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.22112
+      value: -14.503333
       objectReference: {fileID: 0}
     - target: {fileID: 9020241334421569192, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.35831
+      value: 1.0099996
       objectReference: {fileID: 0}
     - target: {fileID: 9020241334421569192, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 9020241334421569192, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15719,6 +15743,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
   m_PrefabInstance: {fileID: 651088318}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &864898910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4050046505156261075, guid: e295caf8ea1933f46a5bb6c4b4e53883, type: 3}
+  m_PrefabInstance: {fileID: 2293325779187806498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &982847870
 GameObject:
   m_ObjectHideFlags: 0
@@ -15939,7 +15968,7 @@ Transform:
   m_GameObject: {fileID: 1057532120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.22112, y: 1.35831, z: 0}
+  m_LocalPosition: {x: -14.503333, y: 1.0099996, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16231,6 +16260,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420796121}
   m_CullTransparentMesh: 1
+--- !u!114 &1575571218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3226256451674891981, guid: d4adc89ae0f4a2b4ab2ddc152826f564, type: 3}
+  m_PrefabInstance: {fileID: 3279509148559473219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211599bf1d4d5ce408b7beffe2afd341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!4 &1575571219 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6694999161595414136, guid: d4adc89ae0f4a2b4ab2ddc152826f564, type: 3}
+  m_PrefabInstance: {fileID: 3279509148559473219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1736971164
 GameObject:
   m_ObjectHideFlags: 0
@@ -16909,11 +16954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4050046505156261075, guid: e295caf8ea1933f46a5bb6c4b4e53883, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.59
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 4050046505156261075, guid: e295caf8ea1933f46a5bb6c4b4e53883, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4050046505156261075, guid: e295caf8ea1933f46a5bb6c4b4e53883, type: 3}
       propertyPath: m_LocalPosition.z
