@@ -15856,6 +15856,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1001 &1188543037
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2053609145}
+    m_Modifications:
+    - target: {fileID: 3965419918405039490, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_Name
+      value: Coin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+--- !u!4 &1188543038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+  m_PrefabInstance: {fileID: 1188543037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1368522624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6842981799110523498, guid: d4adc89ae0f4a2b4ab2ddc152826f564, type: 3}
@@ -16020,6 +16082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 216589010}
+  - {fileID: 1188543038}
   - {fileID: 691505910}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16584,6 +16647,22 @@ PrefabInstance:
     - target: {fileID: 288011311713628147, guid: a244eef06c7c3e7408d3b6b93dde8ef6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482877055947001425, guid: a244eef06c7c3e7408d3b6b93dde8ef6, type: 3}
+      propertyPath: m_Size.x
+      value: 2.0858364
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482877055947001425, guid: a244eef06c7c3e7408d3b6b93dde8ef6, type: 3}
+      propertyPath: m_Size.y
+      value: 4.3661165
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482877055947001425, guid: a244eef06c7c3e7408d3b6b93dde8ef6, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.1424694
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482877055947001425, guid: a244eef06c7c3e7408d3b6b93dde8ef6, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.2844566
       objectReference: {fileID: 0}
     - target: {fileID: 6991300897483992756, guid: a244eef06c7c3e7408d3b6b93dde8ef6, type: 3}
       propertyPath: m_Name
