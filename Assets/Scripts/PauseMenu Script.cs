@@ -21,8 +21,38 @@ public class PauseMenu : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
+        if(scene.name == mainMenuSceneName)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Time.timeScale = 1f;
+        isPaused = false;
+
+        if(pauseMenuPanel == null)
+        {
+            pauseMenuPanel = GameObject.Find("PauseMenuPanel");
+        }
+        if(pauseMenuPanel != null)
+        {
+            pauseMenuPanel.SetActive(false) ;
+        }
+        
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
 
 
     public void Resume()
@@ -44,6 +74,19 @@ public class PauseMenu : MonoBehaviour
         }
         Time.timeScale = 0f;
         isPaused = true;
+    }
+
+    public void TogglePause()
+    {
+        if(isPaused)
+        {
+            Resume();
+
+        }
+         else
+        {
+            Pause();
+        }
     }
 
 
