@@ -1,13 +1,29 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public static PauseMenu Instance;
     [SerializeField] private GameObject pauseMenuPanel;
 
     [SerializeField] private string mainMenuSceneName = "Main Menu Scene";
 
     private bool isPaused = false;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
     public void Resume()
     {
@@ -33,7 +49,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if(isPaused)
             {
