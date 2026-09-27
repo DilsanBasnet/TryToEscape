@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
   public static GameManager Instance;
     
     [SerializeField] private TMP_Text coinText;
-    [SerializeField] private Text legacyCoinText;
     public int totalCoins = 0;
+
     private void Awake()
     {
         if(Instance == null)
@@ -45,16 +45,9 @@ public class GameManager : MonoBehaviour
 
     private void FindCoinTextUI()
     {
-        GameObject textObj = GameObject.Find("CoinsText") ?? GameObject.Find("CoinText");
-
-        if(textObj != null)
+       if(coinText == null)
         {
-            coinText = textObj.GetComponent<TMP_Text>();
-
-            if(coinText == null)
-            {
-                legacyCoinText = textObj.GetComponent<Text>();
-            }
+            coinText = FindAnyObjectByType<TMP_Text>() ;
         }
     }
 
@@ -68,11 +61,11 @@ public class GameManager : MonoBehaviour
     {
         if(coinText != null)
         {
-            coinText.text = "Coins : "  + totalCoins;
+           FindCoinTextUI();
         }
-         else if(legacyCoinText != null)
+        if(coinText != null)
         {
-            legacyCoinText.text = "Coins : "  + totalCoins;
+            coinText.text = "Coins : " + totalCoins;
         }
     }
 

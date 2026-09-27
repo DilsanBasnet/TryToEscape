@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Coin : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class Coin : MonoBehaviour
 
    private void Start()
     {
-        coinID = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name + "_" + transform.position.ToString() ;
+        coinID = SceneManager.GetActiveScene().name + "_" + transform.position.ToString();
 
         if(CoinManagerScript.Instance != null && CoinManagerScript.Instance.IsCoinCollected(coinID))
         {
@@ -19,7 +20,7 @@ public class Coin : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            if(GameManager.Instance != null)
+           if(CoinManagerScript.Instance != null)
             {
                 CoinManagerScript.Instance.RegisterCollectedCoin(coinID);
             }
