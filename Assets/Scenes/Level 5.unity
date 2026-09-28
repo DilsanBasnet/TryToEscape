@@ -189,6 +189,18 @@ PrefabInstance:
       value: Coin (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.16719267
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.16719267
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.16719267
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.32
       objectReference: {fileID: 0}
@@ -52883,6 +52895,18 @@ PrefabInstance:
       value: Coin (5)
       objectReference: {fileID: 0}
     - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.18918848
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.18918848
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.18918848
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.31
       objectReference: {fileID: 0}
@@ -52953,6 +52977,18 @@ PrefabInstance:
     - target: {fileID: 3965419918405039490, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
       propertyPath: m_Name
       value: Coin (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17347814
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.17347814
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17347814
       objectReference: {fileID: 0}
     - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54658,6 +54694,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5414169152188918295, guid: 4987fe37b3cdf2b4cbf829588d4fb601, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6974149694477647311, guid: 4987fe37b3cdf2b4cbf829588d4fb601, type: 3}
       propertyPath: m_Name
       value: MovingPlatform
@@ -54852,6 +54892,18 @@ PrefabInstance:
     - target: {fileID: 3965419918405039490, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
       propertyPath: m_Name
       value: Coin (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.18447383
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.18447383
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.18447383
       objectReference: {fileID: 0}
     - target: {fileID: 5263509249272598931, guid: 0dbe4989a85e1ec4a900df1ff69588ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55417,6 +55469,10 @@ PrefabInstance:
     - target: {fileID: 5020530074717769948, guid: 4987fe37b3cdf2b4cbf829588d4fb601, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414169152188918295, guid: 4987fe37b3cdf2b4cbf829588d4fb601, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6974149694477647311, guid: 4987fe37b3cdf2b4cbf829588d4fb601, type: 3}
       propertyPath: m_Name
