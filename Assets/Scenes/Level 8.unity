@@ -145769,7 +145769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3340849631393752904, guid: a244eef06c7c3e7408d3b6b93dde8ef6, type: 3}
       propertyPath: NextScene
-      value: Level 8
+      value: Level 7
       objectReference: {fileID: 0}
     - target: {fileID: 4482877055947001425, guid: a244eef06c7c3e7408d3b6b93dde8ef6, type: 3}
       propertyPath: m_Size.x
