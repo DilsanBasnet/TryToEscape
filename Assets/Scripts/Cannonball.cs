@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Cannonball : MonoBehaviour
 {
+    [SerializeField] private float rotationSpeed = 360f;
     [SerializeField] private float speed = 10f;
     [SerializeField] private float lifeTime = 5f;
 
@@ -23,6 +24,8 @@ public class Cannonball : MonoBehaviour
     private void Update()
     {
         transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
+
+        transform.Rotate( 0f, 0f, rotationSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
