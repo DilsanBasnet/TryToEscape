@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour{
     private SpriteRenderer spriteRenderer;
     private float move;
     private bool Grounded;
+    private bool isBoosted = false;
 
     void Start(){
         rb = GetComponent<Rigidbody2D> () ;
@@ -54,7 +55,11 @@ public class PlayerController : MonoBehaviour{
 
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(move * speed, rb.linearVelocity.y);
+        if(!isBoosted)
+        {
+            rb.linearVelocity = new Vector2(move * speed, rb.linearVelocity.y);
+        }
+        
     }
 
     private void OnDrawGizmosSelected()
@@ -64,5 +69,28 @@ public class PlayerController : MonoBehaviour{
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(groundCheck.position, groundChecksize);
         }
+    }
+
+    public void ApplySpeedBoost(Vector2 boostVelocity, float duration)
+    {
+        if(!isBoosted)
+        {
+            StartCoroutine(SpeedBoostRoutine(boostVelocity, duration));
+        }
+    }
+
+    private System.Collections.IEnumerator SpeedBoostRoutine(Vector2 boostVelocity, float duration)
+    {
+        isBoosted = true;
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        if(rb != null)
+        {
+            rb.linearVelocity = boostVelocity;
+        }
+
+        yield return new WaitForSeconds(duration);
+        isBoosted = false;
     }
 }
