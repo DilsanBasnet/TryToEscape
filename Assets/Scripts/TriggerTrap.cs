@@ -4,8 +4,8 @@ using UnityEngine;
 public class TriggerTrap : MonoBehaviour
 {
    [SerializeField] private Transform platformToDrop;
-   [SerializeField] private Vector3 targetOffset = new Vector3(0f, -15f, 0f);
-   [SerializeField] private float dropSpeed = 80f;
+   [SerializeField] private Vector3 targetOffset = new Vector3(0f, -0f, 0f);
+   [SerializeField] private float dropSpeed = 100f;
 
    private Vector3 targetPosition;
    private bool hasTriggered = false;
@@ -22,15 +22,13 @@ public class TriggerTrap : MonoBehaviour
     {
         if(hasTriggered) return;
 
-        PlayerController player = other.GetComponent<PlayerController>();
-        
-        if(player == null) player = other.GetComponentInParent<PlayerController>();
-        
-        if(player != null & platformToDrop != null)
+        if(other.CompareTag("Player") || other.GetComponentInParent<PlayerController>() != null)
         {
-            hasTriggered= true;
+            hasTriggered = true;
             StartCoroutine(DropPlatformRoutine());
-        }    }
+        }
+
+         }
 
         private IEnumerator DropPlatformRoutine()
     {
