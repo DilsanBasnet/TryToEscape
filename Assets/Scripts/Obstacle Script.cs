@@ -40,6 +40,7 @@ private IEnumerator HandleRespawn(GameObject player)
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
 
         if(rb != null)
+        
         {
             rb.linearVelocity = Vector2.zero;
             rb.simulated = false;
