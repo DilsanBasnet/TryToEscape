@@ -462188,6 +462188,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8926562529841204838, guid: 455af94e28d5c594a80904b5ef68726e, type: 3}
+      propertyPath: m_text
+      value: LEVEL 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926562529841204838, guid: 455af94e28d5c594a80904b5ef68726e, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.10541113
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926562529841204838, guid: 455af94e28d5c594a80904b5ef68726e, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.25456664
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926562529841204838, guid: 455af94e28d5c594a80904b5ef68726e, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926562529841204838, guid: 455af94e28d5c594a80904b5ef68726e, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279976418
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -462195,7 +462215,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 455af94e28d5c594a80904b5ef68726e, type: 3}
 --- !u!224 &1036763349 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7166250176331805671, guid: 455af94e28d5c594a80904b5ef68726e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4467534790863458584, guid: 455af94e28d5c594a80904b5ef68726e, type: 3}
   m_PrefabInstance: {fileID: 1036763348}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1056331876
@@ -462438,6 +462458,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2572002952670694215, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
+      propertyPath: zoomSpeed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2572002952670694215, guid: edbe2d32fee8960488bc0bfa2fdd2c87, type: 3}
       propertyPath: playerTransform
       value: 
