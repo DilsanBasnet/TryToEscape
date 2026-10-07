@@ -58,6 +58,14 @@ private IEnumerator HandleRespawn(GameObject player)
         {
             StartCoroutine(HandleRespawn(other.gameObject));
         }
+
+        if(other.CompareTag("Player"))
+        {
+            if(AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFX(AudioManager.instance.deathSFX);
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

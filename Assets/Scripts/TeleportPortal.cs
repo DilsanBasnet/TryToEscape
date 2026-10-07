@@ -18,7 +18,16 @@ public class TeleportPortal : MonoBehaviour
         {
             Transform playerTransform = other.transform.root;
             StartCoroutine(TeleportRoutine(playerTransform.gameObject));
-        }}
+        }
+        
+        if(other.CompareTag("Player"))
+        {
+            if(AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFX(AudioManager.instance.portalSFX);
+            }
+        }
+        }
 
         private IEnumerator TeleportRoutine(GameObject player)
     {

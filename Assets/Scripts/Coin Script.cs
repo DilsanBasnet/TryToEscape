@@ -30,7 +30,14 @@ public class Coin : MonoBehaviour
                 GameManager.Instance.AddCoin(coinValue);
             }
 
+            if(AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFX(AudioManager.instance.coinCollectSFX);
+            }
+
             Destroy(gameObject);
         }
     }
+
+    
 }
